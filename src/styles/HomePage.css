@@ -1,0 +1,154 @@
+:root {
+  --primary-color: #28a745;
+  --secondary-color: #ffffff;
+  --text-color: #333;
+  --error-color: #d9534f;
+  --input-border-color: #ccc;
+  --input-focus-color: #28a745;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+}
+
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.intro h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+.subjectSection {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* More spacing between subjects */
+  padding: 20px;
+  background: linear-gradient(135deg, #f0f8ff, #e1ffe1); /* Light gradient background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.subject {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  padding: 20px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  width: 200px; /* Fixed width for uniformity */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px var(--card-shadow); /* Subtle shadow */
+  text-align: center;
+}
+
+.subject:hover {
+  transform: translateY(-8px); /* Lift effect */
+  box-shadow: 0 8px 15px var(--card-hover-shadow); /* Enhanced shadow on hover */
+  background-color: var(--primary-color); /* Change background on hover */
+  color: var(--secondary-color); /* Change text color on hover */
+}
+
+.subject h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subject p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* HomePage.css */
+
+/* Existing styles... */
+
+.footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  position: relative; /* Ensure it stays at the bottom */
+  margin-top: auto; /* Push footer to the bottom of the container */
+}
+
+.footer p {
+  margin: 5px 0; /* Space between paragraphs */
+}
+
+.footer-link {
+  color: var(--secondary-color);
+  text-decoration: none; /* Remove underline */
+  margin: 0 5px; /* Space between links */
+}
+
+.footer-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Navbar styles in HomePage.css or a separate Navbar.css */
+nav {
+  display: flex;
+  width: 100vw;
+  justify-content: center; /* Space between the icons */
+  align-items: center; /* Center vertically */
+  padding: 10px 20px; /* Add some padding */
+  background-color: var(--secondary-color); /* Use your primary color */
+}
+
+.book img, .nigeria img {
+  height: 40px; /* Adjust the size as needed */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.book img:hover, .nigeria img:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+.footerp{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
