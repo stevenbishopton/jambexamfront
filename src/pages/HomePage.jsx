@@ -6,14 +6,16 @@ import nigeriaImage from '../assets/nigeriaphoto-1127371674-1024x1024.jpg';
 import PropTypes from 'prop-types';
 
 const HomePage = () => {
-  const [subjects, setSubjects] = useState([]); 
+  const [subjects, setSubjects] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.BASE_BACKEND_URL}/subjects`);
+        console.log("Base URL:", import.meta.env.VITE_BASE_BACKEND_URL); // Log the base URL
+        const response = await axios.get(`${import.meta.env.VITE_BASE_BACKEND_URL}/subjects`);
         
+        // Check if response data is an array
         if (Array.isArray(response.data)) {
           setSubjects(response.data);
         } else {
@@ -53,7 +55,7 @@ const HomePage = () => {
               </Link>
             ))
           ) : (
-            <p>No subjects available</p> 
+            <p>No subjects available</p>
           )}
         </div>
       </div>

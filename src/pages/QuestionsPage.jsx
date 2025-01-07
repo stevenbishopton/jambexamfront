@@ -15,7 +15,7 @@ const QuestionsPage = () => {
     const fetchQuestions = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.BASE_BACKEND_URL}/questions/topic/${topicId}/questions`
+          `${import.meta.env.VITE_BASE_BACKEND_URL}/questions/topic/${topicId}/questions`
         );
         setQuestions(response.data);
       } catch (error) {

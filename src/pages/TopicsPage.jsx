@@ -15,7 +15,7 @@ const TopicsPage = () => {
     const fetchTopics = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/topics/subject/${subjectId}/topics`
+          `${import.meta.env.VITE_BASE_BACKEND_URL}/topics/subject/${subjectId}/topics`
         );
         setTopics(response.data);
       } catch (error) {
